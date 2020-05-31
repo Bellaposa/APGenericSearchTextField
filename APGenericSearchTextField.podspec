@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'APGenericSearchTextField'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of APGenericSearchTextField.'
+  s.summary          = 'A generic search UITextField with suggestions list'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+"A generic search UITextField with suggestions list with the power of KeyPath and NSPredicate"
                        DESC
 
   s.homepage         = 'https://github.com/Bellaposa/APGenericSearchTextField'
@@ -26,11 +26,16 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Bellaposa' => 'antonioposabella91@gmail.com' }
   s.source           = { :git => 'https://github.com/Bellaposa/APGenericSearchTextField.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/nice_pose'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '12.0'
 
-  s.source_files = 'APGenericSearchTextField/Classes/**/*'
+  #s.source_files = 'APGenericSearchTextField/Classes/**/*'
+  s.source_files = 'Source/**/*.swift'
+  s.swift_version = '5.0'
+  s.platforms = {
+	  "ios": "12.0"
+  }
   
   # s.resource_bundles = {
   #   'APGenericSearchTextField' => ['APGenericSearchTextField/Assets/*.png']

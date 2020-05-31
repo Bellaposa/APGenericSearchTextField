@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import APGenericSearchTextField
 
 class ViewController: UIViewController {
 
