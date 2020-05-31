@@ -1,0 +1,16 @@
+PODS:
+  - APGenericSearchTextField (0.1.0)
+
+DEPENDENCIES:
+  - APGenericSearchTextField (from `../`)
+
+EXTERNAL SOURCES:
+  APGenericSearchTextField:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  APGenericSearchTextField: b40d28411ada0ab66d85abceb73c0de71cadfc83
+
+PODFILE CHECKSUM: 1ac0be5ef60c89841d4ab462bb4aaa2aca328d34
+
+COCOAPODS: 1.9.3

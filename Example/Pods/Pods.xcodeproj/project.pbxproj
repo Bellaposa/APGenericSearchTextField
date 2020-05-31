@@ -1,0 +1,772 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		063E499B1113EF5D8EB0833C1A5DD5B1 /* Pods-APGenericSearchTextField_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D47D0E4EF51A6206EE75727025617C54 /* Pods-APGenericSearchTextField_Example-dummy.m */; };
+		0BAE9CA45995233FE1D94183AC2C34B2 /* Pods-APGenericSearchTextField_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A5DFD62C6B3C55FB24DAAD487756E8 /* Pods-APGenericSearchTextField_Tests-dummy.m */; };
+		627A8D67356900BFA31042D016986A74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		780CF3F8DB7AF3A041FEA4FD2AEC548B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		9708E5F9B676CC9A9384B9FD4DCF5504 /* APGenericSearchTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF0AFE37AF4D4EB39A8743B90E8CF0 /* APGenericSearchTextField-dummy.m */; };
+		A36296891D1FFE6AA32CFDF5704C1916 /* Pods-APGenericSearchTextField_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BA074C1D5E813974D7FAC091A6A04C1 /* Pods-APGenericSearchTextField_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C174CAEDE1A10A73107C257837A0E003 /* Pods-APGenericSearchTextField_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 475450AD399FA3EC01611D3925A12A4A /* Pods-APGenericSearchTextField_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1F6FF9633DF3708841E4B6E9B2122A1 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112AC75BC7F290E254DAE44F8D9C452C /* ReplaceMe.swift */; };
+		C6704EDF22C0EF1033E5120DB8B9C8CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		CBFF382CAD84F68082F0B172ED69492F /* APGenericSearchTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C2C0FBE7593EFB5A855CA12BD2E3DFC /* APGenericSearchTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26EB513E21A4A6D51A8838463FFE7859 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50956D510AF73C4AABA35DCA8AB34C71;
+			remoteInfo = "Pods-APGenericSearchTextField_Example";
+		};
+		724D9D82AF43F3E9186C831FFD5AF586 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C37ED9C62048F024D0E0B2CA444A2E45;
+			remoteInfo = APGenericSearchTextField;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08CF23BEC8313AF7B2E09D024C4628F4 /* APGenericSearchTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = APGenericSearchTextField.modulemap; sourceTree = "<group>"; };
+		10A5DFD62C6B3C55FB24DAAD487756E8 /* Pods-APGenericSearchTextField_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-APGenericSearchTextField_Tests-dummy.m"; sourceTree = "<group>"; };
+		112AC75BC7F290E254DAE44F8D9C452C /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = APGenericSearchTextField/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		12112B67F2DFAF763C97DFDE99E04642 /* APGenericSearchTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = APGenericSearchTextField.debug.xcconfig; sourceTree = "<group>"; };
+		16417B9A259CC048FAEACDDF0FACFC26 /* Pods-APGenericSearchTextField_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APGenericSearchTextField_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		475450AD399FA3EC01611D3925A12A4A /* Pods-APGenericSearchTextField_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-APGenericSearchTextField_Tests-umbrella.h"; sourceTree = "<group>"; };
+		4C2C0FBE7593EFB5A855CA12BD2E3DFC /* APGenericSearchTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "APGenericSearchTextField-umbrella.h"; sourceTree = "<group>"; };
+		4E75AAC9E5FEBF152AD83FBBBA42A825 /* APGenericSearchTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = APGenericSearchTextField.release.xcconfig; sourceTree = "<group>"; };
+		5B76D67C49A69520A9EE0B29359233A0 /* Pods-APGenericSearchTextField_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-APGenericSearchTextField_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		6A39D998BDEFF6DB584136A1B3B45FF2 /* APGenericSearchTextField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "APGenericSearchTextField-Info.plist"; sourceTree = "<group>"; };
+		6B1CE7B03F453550B3AB6EC4BA08DF95 /* Pods_APGenericSearchTextField_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_APGenericSearchTextField_Tests.framework; path = "Pods-APGenericSearchTextField_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74543669AE60AEE330BD42A42A2A4D2D /* Pods_APGenericSearchTextField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_APGenericSearchTextField_Example.framework; path = "Pods-APGenericSearchTextField_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79148EDB206A81650FD58901AE73C3F6 /* APGenericSearchTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = APGenericSearchTextField.framework; path = APGenericSearchTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BA074C1D5E813974D7FAC091A6A04C1 /* Pods-APGenericSearchTextField_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-APGenericSearchTextField_Example-umbrella.h"; sourceTree = "<group>"; };
+		80590CE14A4A629DC8AA6C8BD6C14C4A /* APGenericSearchTextField.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = APGenericSearchTextField.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		85F1D85DF4B184CCA24ED82A75F079C5 /* Pods-APGenericSearchTextField_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-APGenericSearchTextField_Example.modulemap"; sourceTree = "<group>"; };
+		916A31A9C66AD448B1103550DC53F2C5 /* Pods-APGenericSearchTextField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APGenericSearchTextField_Example.release.xcconfig"; sourceTree = "<group>"; };
+		95EDDFF1592392569CBE2C01000817AB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		95F6BC8270B26235E087ADEFAC085D16 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2CE4460C828F74721230E1AB30A506B /* Pods-APGenericSearchTextField_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-APGenericSearchTextField_Example-frameworks.sh"; sourceTree = "<group>"; };
+		ACA4CC682F38BBD9B3794ED899ED86BE /* Pods-APGenericSearchTextField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APGenericSearchTextField_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		ADF561A9D6A4680407A5A6B6DE880B0B /* Pods-APGenericSearchTextField_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-APGenericSearchTextField_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AEA767403175C2874B80A3E3E7DFE7D2 /* APGenericSearchTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "APGenericSearchTextField-prefix.pch"; sourceTree = "<group>"; };
+		BAE325B0362E1BDB2EF40538EE0B208E /* Pods-APGenericSearchTextField_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APGenericSearchTextField_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB034D327A76475E81E158D37EE7F706 /* Pods-APGenericSearchTextField_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-APGenericSearchTextField_Tests-Info.plist"; sourceTree = "<group>"; };
+		C048C1EB5CE884725BAA8FBEA732E453 /* Pods-APGenericSearchTextField_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-APGenericSearchTextField_Example-Info.plist"; sourceTree = "<group>"; };
+		D47D0E4EF51A6206EE75727025617C54 /* Pods-APGenericSearchTextField_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-APGenericSearchTextField_Example-dummy.m"; sourceTree = "<group>"; };
+		E13196F37197DBD85A81DDF37967858D /* Pods-APGenericSearchTextField_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-APGenericSearchTextField_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F06370D58B33C5E8D098189CB7AF5F09 /* Pods-APGenericSearchTextField_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-APGenericSearchTextField_Tests.modulemap"; sourceTree = "<group>"; };
+		FAFF0AFE37AF4D4EB39A8743B90E8CF0 /* APGenericSearchTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "APGenericSearchTextField-dummy.m"; sourceTree = "<group>"; };
+		FD598D3CA7762D1D980A932B02208508 /* Pods-APGenericSearchTextField_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-APGenericSearchTextField_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D359E9D136E42C10BED64C981914B89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				780CF3F8DB7AF3A041FEA4FD2AEC548B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		567330E1EB848BE5110FC338EE3C26C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				627A8D67356900BFA31042D016986A74 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8402BE061EE716DD847437F2FB2858D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6704EDF22C0EF1033E5120DB8B9C8CF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16BD9E6DFEB01D4C650BACAB74646C69 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F2560FB069146EF4BF7D76F0D7BD76D1 /* APGenericSearchTextField */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		46C490404C3847F513989A2E4979331F /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				80590CE14A4A629DC8AA6C8BD6C14C4A /* APGenericSearchTextField.podspec */,
+				95EDDFF1592392569CBE2C01000817AB /* LICENSE */,
+				95F6BC8270B26235E087ADEFAC085D16 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		4CA2E1AB369A967784A7A2F6226A9954 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DE38707DA1FA14C09DCB77249182B9B /* Pods-APGenericSearchTextField_Example */,
+				A8EE41AF831698BBC70E6C1F7BA5F456 /* Pods-APGenericSearchTextField_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4DE38707DA1FA14C09DCB77249182B9B /* Pods-APGenericSearchTextField_Example */ = {
+			isa = PBXGroup;
+			children = (
+				85F1D85DF4B184CCA24ED82A75F079C5 /* Pods-APGenericSearchTextField_Example.modulemap */,
+				ADF561A9D6A4680407A5A6B6DE880B0B /* Pods-APGenericSearchTextField_Example-acknowledgements.markdown */,
+				5B76D67C49A69520A9EE0B29359233A0 /* Pods-APGenericSearchTextField_Example-acknowledgements.plist */,
+				D47D0E4EF51A6206EE75727025617C54 /* Pods-APGenericSearchTextField_Example-dummy.m */,
+				A2CE4460C828F74721230E1AB30A506B /* Pods-APGenericSearchTextField_Example-frameworks.sh */,
+				C048C1EB5CE884725BAA8FBEA732E453 /* Pods-APGenericSearchTextField_Example-Info.plist */,
+				7BA074C1D5E813974D7FAC091A6A04C1 /* Pods-APGenericSearchTextField_Example-umbrella.h */,
+				ACA4CC682F38BBD9B3794ED899ED86BE /* Pods-APGenericSearchTextField_Example.debug.xcconfig */,
+				916A31A9C66AD448B1103550DC53F2C5 /* Pods-APGenericSearchTextField_Example.release.xcconfig */,
+			);
+			name = "Pods-APGenericSearchTextField_Example";
+			path = "Target Support Files/Pods-APGenericSearchTextField_Example";
+			sourceTree = "<group>";
+		};
+		7B36B5302CD29A9A62D9D2AA083E0893 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79148EDB206A81650FD58901AE73C3F6 /* APGenericSearchTextField.framework */,
+				74543669AE60AEE330BD42A42A2A4D2D /* Pods_APGenericSearchTextField_Example.framework */,
+				6B1CE7B03F453550B3AB6EC4BA08DF95 /* Pods_APGenericSearchTextField_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1AD1BE656394375701410990739AFB2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				08CF23BEC8313AF7B2E09D024C4628F4 /* APGenericSearchTextField.modulemap */,
+				FAFF0AFE37AF4D4EB39A8743B90E8CF0 /* APGenericSearchTextField-dummy.m */,
+				6A39D998BDEFF6DB584136A1B3B45FF2 /* APGenericSearchTextField-Info.plist */,
+				AEA767403175C2874B80A3E3E7DFE7D2 /* APGenericSearchTextField-prefix.pch */,
+				4C2C0FBE7593EFB5A855CA12BD2E3DFC /* APGenericSearchTextField-umbrella.h */,
+				12112B67F2DFAF763C97DFDE99E04642 /* APGenericSearchTextField.debug.xcconfig */,
+				4E75AAC9E5FEBF152AD83FBBBA42A825 /* APGenericSearchTextField.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/APGenericSearchTextField";
+			sourceTree = "<group>";
+		};
+		A8EE41AF831698BBC70E6C1F7BA5F456 /* Pods-APGenericSearchTextField_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F06370D58B33C5E8D098189CB7AF5F09 /* Pods-APGenericSearchTextField_Tests.modulemap */,
+				FD598D3CA7762D1D980A932B02208508 /* Pods-APGenericSearchTextField_Tests-acknowledgements.markdown */,
+				E13196F37197DBD85A81DDF37967858D /* Pods-APGenericSearchTextField_Tests-acknowledgements.plist */,
+				10A5DFD62C6B3C55FB24DAAD487756E8 /* Pods-APGenericSearchTextField_Tests-dummy.m */,
+				BB034D327A76475E81E158D37EE7F706 /* Pods-APGenericSearchTextField_Tests-Info.plist */,
+				475450AD399FA3EC01611D3925A12A4A /* Pods-APGenericSearchTextField_Tests-umbrella.h */,
+				BAE325B0362E1BDB2EF40538EE0B208E /* Pods-APGenericSearchTextField_Tests.debug.xcconfig */,
+				16417B9A259CC048FAEACDDF0FACFC26 /* Pods-APGenericSearchTextField_Tests.release.xcconfig */,
+			);
+			name = "Pods-APGenericSearchTextField_Tests";
+			path = "Target Support Files/Pods-APGenericSearchTextField_Tests";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				16BD9E6DFEB01D4C650BACAB74646C69 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				7B36B5302CD29A9A62D9D2AA083E0893 /* Products */,
+				4CA2E1AB369A967784A7A2F6226A9954 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2560FB069146EF4BF7D76F0D7BD76D1 /* APGenericSearchTextField */ = {
+			isa = PBXGroup;
+			children = (
+				112AC75BC7F290E254DAE44F8D9C452C /* ReplaceMe.swift */,
+				46C490404C3847F513989A2E4979331F /* Pod */,
+				A1AD1BE656394375701410990739AFB2 /* Support Files */,
+			);
+			name = APGenericSearchTextField;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5292780A76B144445D0B5EB617ED95BC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBFF382CAD84F68082F0B172ED69492F /* APGenericSearchTextField-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D693D99CA895BDEF312A4E76591E23D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A36296891D1FFE6AA32CFDF5704C1916 /* Pods-APGenericSearchTextField_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F605B8249DE74EB1DD01106018415F03 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C174CAEDE1A10A73107C257837A0E003 /* Pods-APGenericSearchTextField_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4FE632F3DABC2A44A734C049D3A8A89B /* Pods-APGenericSearchTextField_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 321B255BA8A3B91F6AB480351060CD46 /* Build configuration list for PBXNativeTarget "Pods-APGenericSearchTextField_Tests" */;
+			buildPhases = (
+				F605B8249DE74EB1DD01106018415F03 /* Headers */,
+				3AA53A4788B73F6443AE4C8B2735B5F6 /* Sources */,
+				3D359E9D136E42C10BED64C981914B89 /* Frameworks */,
+				49D7ADB7AB02F1CB2DD08AD4EC9AC54C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				385AFED59EFE79A15994E52370D82FE1 /* PBXTargetDependency */,
+			);
+			name = "Pods-APGenericSearchTextField_Tests";
+			productName = "Pods-APGenericSearchTextField_Tests";
+			productReference = 6B1CE7B03F453550B3AB6EC4BA08DF95 /* Pods_APGenericSearchTextField_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		50956D510AF73C4AABA35DCA8AB34C71 /* Pods-APGenericSearchTextField_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D5CE3256EE610DD06FC3DEFEA659F26 /* Build configuration list for PBXNativeTarget "Pods-APGenericSearchTextField_Example" */;
+			buildPhases = (
+				5D693D99CA895BDEF312A4E76591E23D /* Headers */,
+				FAD10E23F896A764B4E174A7DDF38415 /* Sources */,
+				567330E1EB848BE5110FC338EE3C26C8 /* Frameworks */,
+				8173EB8682DFC15DBCEBC812EBC33B4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DA83F15BA44416530E6EC98E106CD14 /* PBXTargetDependency */,
+			);
+			name = "Pods-APGenericSearchTextField_Example";
+			productName = "Pods-APGenericSearchTextField_Example";
+			productReference = 74543669AE60AEE330BD42A42A2A4D2D /* Pods_APGenericSearchTextField_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C37ED9C62048F024D0E0B2CA444A2E45 /* APGenericSearchTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A421BF61757B785E7A407738AC79840B /* Build configuration list for PBXNativeTarget "APGenericSearchTextField" */;
+			buildPhases = (
+				5292780A76B144445D0B5EB617ED95BC /* Headers */,
+				1E0822F720A0C685DCC8387379072B26 /* Sources */,
+				8402BE061EE716DD847437F2FB2858D4 /* Frameworks */,
+				42FAA3E3D18258993E357924469F2E44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = APGenericSearchTextField;
+			productName = APGenericSearchTextField;
+			productReference = 79148EDB206A81650FD58901AE73C3F6 /* APGenericSearchTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 7B36B5302CD29A9A62D9D2AA083E0893 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C37ED9C62048F024D0E0B2CA444A2E45 /* APGenericSearchTextField */,
+				50956D510AF73C4AABA35DCA8AB34C71 /* Pods-APGenericSearchTextField_Example */,
+				4FE632F3DABC2A44A734C049D3A8A89B /* Pods-APGenericSearchTextField_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42FAA3E3D18258993E357924469F2E44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D7ADB7AB02F1CB2DD08AD4EC9AC54C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8173EB8682DFC15DBCEBC812EBC33B4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E0822F720A0C685DCC8387379072B26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9708E5F9B676CC9A9384B9FD4DCF5504 /* APGenericSearchTextField-dummy.m in Sources */,
+				C1F6FF9633DF3708841E4B6E9B2122A1 /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AA53A4788B73F6443AE4C8B2735B5F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BAE9CA45995233FE1D94183AC2C34B2 /* Pods-APGenericSearchTextField_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD10E23F896A764B4E174A7DDF38415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				063E499B1113EF5D8EB0833C1A5DD5B1 /* Pods-APGenericSearchTextField_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		385AFED59EFE79A15994E52370D82FE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-APGenericSearchTextField_Example";
+			target = 50956D510AF73C4AABA35DCA8AB34C71 /* Pods-APGenericSearchTextField_Example */;
+			targetProxy = 26EB513E21A4A6D51A8838463FFE7859 /* PBXContainerItemProxy */;
+		};
+		6DA83F15BA44416530E6EC98E106CD14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = APGenericSearchTextField;
+			target = C37ED9C62048F024D0E0B2CA444A2E45 /* APGenericSearchTextField */;
+			targetProxy = 724D9D82AF43F3E9186C831FFD5AF586 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		30F41A94390BE15657578A6D4D27FB40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16417B9A259CC048FAEACDDF0FACFC26 /* Pods-APGenericSearchTextField_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-APGenericSearchTextField_Tests/Pods-APGenericSearchTextField_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-APGenericSearchTextField_Tests/Pods-APGenericSearchTextField_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7F2BD5B038157AC577FBF9C88BAEF3D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12112B67F2DFAF763C97DFDE99E04642 /* APGenericSearchTextField.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/APGenericSearchTextField/APGenericSearchTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/APGenericSearchTextField/APGenericSearchTextField-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/APGenericSearchTextField/APGenericSearchTextField.modulemap";
+				PRODUCT_MODULE_NAME = APGenericSearchTextField;
+				PRODUCT_NAME = APGenericSearchTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9687544FD44A9B50AAD48FBD30684DAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 916A31A9C66AD448B1103550DC53F2C5 /* Pods-APGenericSearchTextField_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-APGenericSearchTextField_Example/Pods-APGenericSearchTextField_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-APGenericSearchTextField_Example/Pods-APGenericSearchTextField_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B0087CB4594321EF41619F3181FE120E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B3D10DE1DAB0FF5042E15F93586ECA59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E75AAC9E5FEBF152AD83FBBBA42A825 /* APGenericSearchTextField.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/APGenericSearchTextField/APGenericSearchTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/APGenericSearchTextField/APGenericSearchTextField-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/APGenericSearchTextField/APGenericSearchTextField.modulemap";
+				PRODUCT_MODULE_NAME = APGenericSearchTextField;
+				PRODUCT_NAME = APGenericSearchTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BC63FB4915AAD38354655974644E29B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACA4CC682F38BBD9B3794ED899ED86BE /* Pods-APGenericSearchTextField_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-APGenericSearchTextField_Example/Pods-APGenericSearchTextField_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-APGenericSearchTextField_Example/Pods-APGenericSearchTextField_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E16272E3529A9ADDA786378BAB3C7EEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAE325B0362E1BDB2EF40538EE0B208E /* Pods-APGenericSearchTextField_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-APGenericSearchTextField_Tests/Pods-APGenericSearchTextField_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-APGenericSearchTextField_Tests/Pods-APGenericSearchTextField_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D5CE3256EE610DD06FC3DEFEA659F26 /* Build configuration list for PBXNativeTarget "Pods-APGenericSearchTextField_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC63FB4915AAD38354655974644E29B2 /* Debug */,
+				9687544FD44A9B50AAD48FBD30684DAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		321B255BA8A3B91F6AB480351060CD46 /* Build configuration list for PBXNativeTarget "Pods-APGenericSearchTextField_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E16272E3529A9ADDA786378BAB3C7EEF /* Debug */,
+				30F41A94390BE15657578A6D4D27FB40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
+				B0087CB4594321EF41619F3181FE120E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A421BF61757B785E7A407738AC79840B /* Build configuration list for PBXNativeTarget "APGenericSearchTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F2BD5B038157AC577FBF9C88BAEF3D1 /* Debug */,
+				B3D10DE1DAB0FF5042E15F93586ECA59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
