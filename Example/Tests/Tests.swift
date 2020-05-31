@@ -13,10 +13,12 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
+	func testEqualName() {
+		let persons = [Person(name: "LeBron", surname: "James"), Person(name: "Larry", surname: "Bird")]
+		if let person = persons.filter(operation: \Person.name == "LeBron") {
+			XCTAssertEqual(person.first!.name, "LeBron")
+		}
+	}
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
@@ -25,4 +27,14 @@ class Tests: XCTestCase {
         }
     }
     
+}
+
+private class Person: NSObject {
+	@objc let name: String
+	@objc let surname: String
+	
+	init(name: String, surname: String) {
+		self.name = name
+		self.surname = surname
+	}
 }
