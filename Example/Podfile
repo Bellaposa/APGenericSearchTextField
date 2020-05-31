@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'APGenericSearchTextField_Example' do
+  pod 'APGenericSearchTextField', :path => '../'
+
+  target 'APGenericSearchTextField_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
