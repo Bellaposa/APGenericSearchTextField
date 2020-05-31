@@ -31,17 +31,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '12.0'
 
   #s.source_files = 'APGenericSearchTextField/Classes/**/*'
-  s.source_files = 'Source/**/*.swift'
+  s.source_files = 'APGenericSearchTextField/Classes/**/*.swift'
   s.swift_version = '5.0'
   s.platforms = {
 	  "ios": "12.0"
   }
-  
-  # s.resource_bundles = {
-  #   'APGenericSearchTextField' => ['APGenericSearchTextField/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
