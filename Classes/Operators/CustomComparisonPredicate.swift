@@ -17,12 +17,12 @@ public func == <Element: Equatable, Root, Value: KeyPath<Root, Element>>(keyPath
 	Comparison(keyPath, .equalTo, value)
 }
 
-infix operator ⊂
 /// Contains operator
 /// - Parameters:
 ///   - keyPath: KeyPath<Root, Element>
 ///   - value: value to compare
 /// - Returns: Comparison
+infix operator ⊂
 public func ⊂ <Element: Equatable, Root, Value: KeyPath<Root, Element>>(keyPath: Value, value: Element) -> Comparison<Root> {
 	Comparison(keyPath, .contains, value)
 }
