@@ -23,6 +23,11 @@ class ViewController: UIViewController {
 		searchTextField.placeholder = "Type Here"
 		searchTextField.filterOperator = .contains
 		searchTextField.propertyToFilter = \.surname
+
+		searchTextField.singleItemHandler = { value in
+			print(value)
+		}
+		
 		self.view.addSubview(searchTextField)
     }
 

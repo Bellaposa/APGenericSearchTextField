@@ -13,8 +13,7 @@ private enum Direction {
 }
 
 public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
-	public typealias CellConfigurator = (Model, UITableViewCell) -> Void
-
+	
 	fileprivate var datasource: TableViewDataSource<Model>?
 	fileprivate let identifier: String = "APGenericSearchTextFieldCell"
 	fileprivate var tableView: UITableView?
@@ -35,6 +34,9 @@ public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 
 	open var propertyToFilter: KeyPath<Model, String>?
 
+	open var itemSelectionHandler: ItemHandler?
+	open var stoppedTypingHandler: StoppedTypingHandler?
+	open var singleItemHandler: SingleItemHandler?
 
 	deinit {
 		NotificationCenter.default.removeObserver(self)
@@ -71,6 +73,7 @@ public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 		NotificationCenter.default.addObserver(self, selector: #selector(GenericSearchTextField.keyboardDidChangeFrame(_:)), name: UIResponder.keyboardDidChangeFrameNotification, object: nil)
 
 	}
+
 	@objc func textFieldDidChange() {
 
 		buildSearchTableView()
@@ -88,22 +91,53 @@ public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 		tableView?.reloadData()
 	}
 
-	@objc func textFieldDidBeginEditing() {}
+	@objc func textFieldDidBeginEditing() {
+		clearResults()
+	}
 
-	@objc func textFieldDidEndEditing() {}
+	@objc func textFieldDidEndEditing() {
+		clearResults()
+		tableView?.reloadData()
+	}
 
-	@objc func textFieldDidEndEditingOnExit() {}
+	@objc func textFieldDidEndEditingOnExit() {
+		if let itemHandler = itemSelectionHandler {
+			itemHandler(datasource?.searchResults ?? [])
+		}
+	}
 
-	@objc func keyboardWillShow(_ notification: Notification) {}
+	@objc func keyboardWillShow(_ notification: Notification) {
+		if !keyboardIsShowing && isEditing {
+			keyboardIsShowing = true
+			keyboardFrame = ((notification as NSNotification).userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+//			interactedWith = true
+			prepareDrawTableResult()
+		}
+	}
 
-	@objc func keyboardWillHide(_ notification: Notification) {}
+	@objc func keyboardWillHide(_ notification: Notification) {
+		if keyboardIsShowing {
+			keyboardIsShowing = false
+			direction = .down
+			redrawSearchTableView()
+		}
+	}
 
-	@objc func keyboardDidChangeFrame(_ notification: Notification) {}
+	@objc func keyboardDidChangeFrame(_ notification: Notification) {
+		DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+			self?.keyboardFrame = ((notification as NSNotification).userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+			self?.prepareDrawTableResult()
+		}
+	}
+	public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		if let singleItem = singleItemHandler, let item = datasource?.getModelAt(indexPath) {
+			singleItem(item)
+		}
+	}
 }
 
-
 extension GenericSearchTextField {
-	// Create the filter table and shadow view
+	/// Create the filter table and shadow view
 	fileprivate func buildSearchTableView() {
 		guard let tableView = tableView, let shadowView = shadowView else {
 			self.tableView = UITableView(frame: CGRect.zero)
@@ -128,7 +162,7 @@ extension GenericSearchTextField {
 		redrawSearchTableView()
 	}
 
-	// Re-set frames and theme colours
+	/// Re-set frames
 	fileprivate func redrawSearchTableView() {
 
 		if let tableView = tableView {
@@ -201,4 +235,34 @@ extension GenericSearchTextField {
 			default: return NSPredicate()
 		}
 	}
+
+	/// Clear all results
+	fileprivate func clearResults() {
+		tableView?.removeFromSuperview()
+	}
+
+
+	/// Draw table result
+	fileprivate func prepareDrawTableResult() {
+		guard let frame = self.superview?.convert(self.frame, to: UIApplication.shared.keyWindow) else { return }
+		if let keyboardFrame = keyboardFrame {
+			var newFrame = frame
+			newFrame.size.height += 20
+
+			if keyboardFrame.intersects(newFrame) {
+				direction = .up
+			} else {
+				direction = .down
+			}
+
+			redrawSearchTableView()
+		} else {
+			if self.center.y + 20 > UIApplication.shared.keyWindow!.frame.size.height {
+				direction = .up
+			} else {
+				direction = .down
+			}
+		}
+	}
 }
+extension GenericSearchTextField: TextFieldHelperProtocol {}

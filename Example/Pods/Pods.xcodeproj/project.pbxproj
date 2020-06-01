@@ -19,6 +19,7 @@
 		89A5A93A2484F93600290F0B /* GenericSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A9392484F93600290F0B /* GenericSearchTextField.swift */; };
 		89A5A93C2484F9FA00290F0B /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A93B2484F9FA00290F0B /* TableViewDataSource.swift */; };
 		89AC3B0D248510A800DBEAA2 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC3B0C248510A800DBEAA2 /* ErrorMessage.swift */; };
+		89D477D8248534090030CA9C /* TextFieldHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D477D7248534090030CA9C /* TextFieldHelperProtocol.swift */; };
 		9708E5F9B676CC9A9384B9FD4DCF5504 /* APGenericSearchTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF0AFE37AF4D4EB39A8743B90E8CF0 /* APGenericSearchTextField-dummy.m */; };
 		A36296891D1FFE6AA32CFDF5704C1916 /* Pods-APGenericSearchTextField_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BA074C1D5E813974D7FAC091A6A04C1 /* Pods-APGenericSearchTextField_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C174CAEDE1A10A73107C257837A0E003 /* Pods-APGenericSearchTextField_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 475450AD399FA3EC01611D3925A12A4A /* Pods-APGenericSearchTextField_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -68,6 +69,7 @@
 		89A5A9392484F93600290F0B /* GenericSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSearchTextField.swift; sourceTree = "<group>"; };
 		89A5A93B2484F9FA00290F0B /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		89AC3B0C248510A800DBEAA2 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		89D477D7248534090030CA9C /* TextFieldHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldHelperProtocol.swift; sourceTree = "<group>"; };
 		916A31A9C66AD448B1103550DC53F2C5 /* Pods-APGenericSearchTextField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APGenericSearchTextField_Example.release.xcconfig"; sourceTree = "<group>"; };
 		95EDDFF1592392569CBE2C01000817AB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		95F6BC8270B26235E087ADEFAC085D16 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				89A5A9392484F93600290F0B /* GenericSearchTextField.swift */,
 				89A5A93B2484F9FA00290F0B /* TableViewDataSource.swift */,
 				89652D7A24850D6F00D852DD /* FilterOperator.swift */,
+				89D477D7248534090030CA9C /* TextFieldHelperProtocol.swift */,
 			);
 			path = TextFieldItems;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				8968F8C424843B36001E6CF9 /* CustomCompoundPredicate.swift in Sources */,
 				89652D7B24850D6F00D852DD /* FilterOperator.swift in Sources */,
 				9708E5F9B676CC9A9384B9FD4DCF5504 /* APGenericSearchTextField-dummy.m in Sources */,
+				89D477D8248534090030CA9C /* TextFieldHelperProtocol.swift in Sources */,
 				8968F8C624843B36001E6CF9 /* Array+Extension.swift in Sources */,
 				89A5A93C2484F9FA00290F0B /* TableViewDataSource.swift in Sources */,
 				89AC3B0D248510A800DBEAA2 /* ErrorMessage.swift in Sources */,

@@ -8,14 +8,12 @@
 import UIKit
 
 class TableViewDataSource<Model>: NSObject, UITableViewDataSource {
-	
-	typealias CellConfigurator = (Model, UITableViewCell) -> Void
-	
+
 	private var models: [Model] = []
-	private var searchResults: [Model] = []
+	private(set) open var searchResults: [Model] = []
 	private let reuseIdentifier: String
 	private let cellConfigurator: CellConfigurator
-	
+
 	init(models: [Model],
 		 reuseIdentifier: String,
 		 cellConfigurator: @escaping CellConfigurator) {
@@ -43,7 +41,7 @@ class TableViewDataSource<Model>: NSObject, UITableViewDataSource {
 }
 
 extension TableViewDataSource {
-	fileprivate func getModelAt(_ indexPath: IndexPath) -> Model {
+	func getModelAt(_ indexPath: IndexPath) -> Model {
 		return searchResults[indexPath.item]
 	}
 	
@@ -52,3 +50,5 @@ extension TableViewDataSource {
 		print(searchResults)
 	}
 }
+
+extension TableViewDataSource: TextFieldHelperProtocol {}
