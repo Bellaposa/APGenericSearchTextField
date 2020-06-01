@@ -8,8 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'APGenericSearchTextField'
-  s.version          = '0.1.5'
-  s.version          = '0.1.3'
+  s.version          = '0.1.6'
   s.summary          = 'A generic search UITextField with suggestions list'
 
 # This description is used to generate tags and improve search results.
