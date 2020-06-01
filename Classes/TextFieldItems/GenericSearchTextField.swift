@@ -76,7 +76,11 @@ public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 		buildSearchTableView()
 
 		guard let property = propertyToFilter else {
-			fatalError(ErrorMessage.propertyToFilter.description)
+			fatalError(ErrorMessage.missingPropertyToFilter.description)
+		}
+
+		guard filterOperator != nil else {
+			fatalError(ErrorMessage.missingFilterOperator.description)
 		}
 
 		let predicate = filter(property, value: text!)

@@ -8,14 +8,17 @@
 import Foundation
 
 enum ErrorMessage {
-	case propertyToFilter
+	case missingPropertyToFilter
+	case missingFilterOperator
 }
 
 extension ErrorMessage {
 	var description: String {
 		switch self {
-			case .propertyToFilter:
+			case .missingPropertyToFilter:
 				return "Missing: Property to filter"
+			case .missingFilterOperator:
+				return "Missing: Filter operator"
 		}
 	}
 }
