@@ -11,9 +11,19 @@ import APGenericSearchTextField
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
+	var persons = Person.generateRandomPerson()
+
+	override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+		let searchTextField = GenericSearchTextField(model: persons) { (person, cell) in
+			cell.textLabel?.text = person.surname
+		}
+
+		searchTextField.placeholder = "Type Here"
+		searchTextField.filterOperator = .contains
+		searchTextField.propertyToFilter = \.surname
+		self.view.addSubview(searchTextField)
     }
 
     override func didReceiveMemoryWarning() {

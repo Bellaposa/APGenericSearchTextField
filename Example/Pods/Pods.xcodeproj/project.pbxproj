@@ -11,10 +11,14 @@
 		0BAE9CA45995233FE1D94183AC2C34B2 /* Pods-APGenericSearchTextField_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A5DFD62C6B3C55FB24DAAD487756E8 /* Pods-APGenericSearchTextField_Tests-dummy.m */; };
 		627A8D67356900BFA31042D016986A74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		780CF3F8DB7AF3A041FEA4FD2AEC548B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		89652D7B24850D6F00D852DD /* FilterOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89652D7A24850D6F00D852DD /* FilterOperator.swift */; };
 		8968F8C324843B36001E6CF9 /* PredicateTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8968F8BE24843B36001E6CF9 /* PredicateTypes.swift */; };
 		8968F8C424843B36001E6CF9 /* CustomCompoundPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8968F8BF24843B36001E6CF9 /* CustomCompoundPredicate.swift */; };
 		8968F8C524843B36001E6CF9 /* CustomComparisonPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8968F8C024843B36001E6CF9 /* CustomComparisonPredicate.swift */; };
 		8968F8C624843B36001E6CF9 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8968F8C224843B36001E6CF9 /* Array+Extension.swift */; };
+		89A5A93A2484F93600290F0B /* GenericSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A9392484F93600290F0B /* GenericSearchTextField.swift */; };
+		89A5A93C2484F9FA00290F0B /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5A93B2484F9FA00290F0B /* TableViewDataSource.swift */; };
+		89AC3B0D248510A800DBEAA2 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC3B0C248510A800DBEAA2 /* ErrorMessage.swift */; };
 		9708E5F9B676CC9A9384B9FD4DCF5504 /* APGenericSearchTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFF0AFE37AF4D4EB39A8743B90E8CF0 /* APGenericSearchTextField-dummy.m */; };
 		A36296891D1FFE6AA32CFDF5704C1916 /* Pods-APGenericSearchTextField_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BA074C1D5E813974D7FAC091A6A04C1 /* Pods-APGenericSearchTextField_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C174CAEDE1A10A73107C257837A0E003 /* Pods-APGenericSearchTextField_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 475450AD399FA3EC01611D3925A12A4A /* Pods-APGenericSearchTextField_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,10 +60,14 @@
 		7BA074C1D5E813974D7FAC091A6A04C1 /* Pods-APGenericSearchTextField_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-APGenericSearchTextField_Example-umbrella.h"; sourceTree = "<group>"; };
 		80590CE14A4A629DC8AA6C8BD6C14C4A /* APGenericSearchTextField.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = APGenericSearchTextField.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		85F1D85DF4B184CCA24ED82A75F079C5 /* Pods-APGenericSearchTextField_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-APGenericSearchTextField_Example.modulemap"; sourceTree = "<group>"; };
+		89652D7A24850D6F00D852DD /* FilterOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOperator.swift; sourceTree = "<group>"; };
 		8968F8BE24843B36001E6CF9 /* PredicateTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredicateTypes.swift; sourceTree = "<group>"; };
 		8968F8BF24843B36001E6CF9 /* CustomCompoundPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCompoundPredicate.swift; sourceTree = "<group>"; };
 		8968F8C024843B36001E6CF9 /* CustomComparisonPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomComparisonPredicate.swift; sourceTree = "<group>"; };
 		8968F8C224843B36001E6CF9 /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		89A5A9392484F93600290F0B /* GenericSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericSearchTextField.swift; sourceTree = "<group>"; };
+		89A5A93B2484F9FA00290F0B /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		89AC3B0C248510A800DBEAA2 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		916A31A9C66AD448B1103550DC53F2C5 /* Pods-APGenericSearchTextField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-APGenericSearchTextField_Example.release.xcconfig"; sourceTree = "<group>"; };
 		95EDDFF1592392569CBE2C01000817AB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		95F6BC8270B26235E087ADEFAC085D16 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -160,9 +168,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		89652D7924850D0800D852DD /* TextFieldItems */ = {
+			isa = PBXGroup;
+			children = (
+				89A5A9392484F93600290F0B /* GenericSearchTextField.swift */,
+				89A5A93B2484F9FA00290F0B /* TableViewDataSource.swift */,
+				89652D7A24850D6F00D852DD /* FilterOperator.swift */,
+			);
+			path = TextFieldItems;
+			sourceTree = "<group>";
+		};
 		8968F8BB248438C7001E6CF9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				89AC3B0B2485109600DBEAA2 /* Errors */,
+				89652D7924850D0800D852DD /* TextFieldItems */,
 				8968F8C124843B36001E6CF9 /* Extension */,
 				8968F8BD24843B36001E6CF9 /* Operators */,
 			);
@@ -185,6 +205,14 @@
 				8968F8C224843B36001E6CF9 /* Array+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		89AC3B0B2485109600DBEAA2 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				89AC3B0C248510A800DBEAA2 /* ErrorMessage.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		A1AD1BE656394375701410990739AFB2 /* Support Files */ = {
@@ -405,10 +433,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89A5A93A2484F93600290F0B /* GenericSearchTextField.swift in Sources */,
 				8968F8C324843B36001E6CF9 /* PredicateTypes.swift in Sources */,
 				8968F8C424843B36001E6CF9 /* CustomCompoundPredicate.swift in Sources */,
+				89652D7B24850D6F00D852DD /* FilterOperator.swift in Sources */,
 				9708E5F9B676CC9A9384B9FD4DCF5504 /* APGenericSearchTextField-dummy.m in Sources */,
 				8968F8C624843B36001E6CF9 /* Array+Extension.swift in Sources */,
+				89A5A93C2484F9FA00290F0B /* TableViewDataSource.swift in Sources */,
+				89AC3B0D248510A800DBEAA2 /* ErrorMessage.swift in Sources */,
 				8968F8C524843B36001E6CF9 /* CustomComparisonPredicate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
