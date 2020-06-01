@@ -47,7 +47,7 @@ extension TableViewDataSource {
 		return searchResults[indexPath.item]
 	}
 	
-	fileprivate func search(query: NSPredicate) {
+	func search(query: NSPredicate) {
 		searchResults = models.filter(operation: query) ?? []
 		print(searchResults)
 	}
