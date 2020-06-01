@@ -4,10 +4,13 @@ import APGenericSearchTextField
 class Tests: XCTestCase {
 
 	private var persons: [Person] = []
+	private var textField: GenericSearchTextField<Any>?
 
 	override func setUp() {
 		super.setUp()
 		persons = [Person(name: "LeBron", surname: "James"), Person(name: "Larry", surname: "Bird")]
+		textField = GenericSearchTextField(model: persons, cellConfigurator: { (_, _) in
+		})
 	}
 
 	override func tearDown() {
