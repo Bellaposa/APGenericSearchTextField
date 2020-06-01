@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum FilterOperator {
+public enum FilterOperator {
 	case equal
 	case contains
 }
