@@ -54,12 +54,9 @@ public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 	}
 
 	/// Init
-	public init(model: [Model], cellConfigurator: @escaping (CellConfigurator))  {
+	public init(model: [Model], frame: CGRect, cellConfigurator: @escaping (CellConfigurator)) {
 		self.datasource = TableViewDataSource(models: model, reuseIdentifier: identifier, cellConfigurator: cellConfigurator)
-		super.init(frame: CGRect(x: 150,
-								 y: 150,
-								 width: 100,
-								 height: 20)) // dummy size
+		super.init(frame: frame)
 		self.buildSearchTableView()
 	}
 	/// Required init

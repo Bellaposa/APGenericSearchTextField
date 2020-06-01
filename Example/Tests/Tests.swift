@@ -9,7 +9,8 @@ class Tests: XCTestCase {
 	override func setUp() {
 		super.setUp()
 		persons = [Person(name: "LeBron", surname: "James"), Person(name: "Larry", surname: "Bird")]
-		textField = GenericSearchTextField(model: persons, cellConfigurator: { (_, _) in
+		let frame = CGRect(x: 150, y: 150, width: 200, height: 20)
+		textField = GenericSearchTextField(model: persons, frame: frame, cellConfigurator: { (_, _) in
 		})
 	}
 

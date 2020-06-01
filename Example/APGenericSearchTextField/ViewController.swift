@@ -15,17 +15,18 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-
-		let searchTextField = GenericSearchTextField(model: persons) { (person, cell) in
-			cell.textLabel?.text = person.surname
+		let frame = CGRect(x: 150, y: 150, width: 200, height: 20)
+		let searchTextField = GenericSearchTextField(model: persons, frame: frame) { (person, cell) in
+			cell.textLabel?.text = person.name
 		}
 
 		searchTextField.placeholder = "Type Here"
 		searchTextField.filterOperator = .contains
-		searchTextField.propertyToFilter = \.surname
+		searchTextField.propertyToFilter = \.name
 
-		searchTextField.singleItemHandler = { value in
+		searchTextField.singleItemHandler = { [weak self] value in
 			print(value)
+			searchTextField.text = value.name
 		}
 
 		searchTextField.minCharactersNumberToStartFiltering = 3
