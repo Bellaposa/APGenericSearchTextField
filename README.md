@@ -4,7 +4,8 @@
 [![Version](https://img.shields.io/cocoapods/v/APGenericSearchTextField.svg?style=flat)](https://cocoapods.org/pods/APGenericSearchTextField)
 [![License](https://img.shields.io/cocoapods/l/APGenericSearchTextField.svg?style=flat)](https://cocoapods.org/pods/APGenericSearchTextField)
 [![Platform](https://img.shields.io/cocoapods/p/APGenericSearchTextField.svg?style=flat)](https://cocoapods.org/pods/APGenericSearchTextField)
-##Context
+
+### Context
 
 Swift 4 introduced a new type called KeyPath. It allows to access the properties of an object.  
 For instance:
@@ -13,7 +14,7 @@ For instance:
 `let keyPathCount = \String.count`
 
 `let count = helloWorld[keyPath: keyPathCount]`  
-`//count == 3`  
+`//count == 10`  
 
 The syntax can be very concise, it supports type inference and property chaining.
 
@@ -56,7 +57,7 @@ At the moment only two operators are supported
 ### Property To Filter
 Using keyPath you can choose what field of object you want to compare
 
-For istance: `\.name ` if you want to filter your array objects by name 
+For istance: `\.name `  if you want to filter your array objects by name 
 
 ### Customization
 It's possible to customize your suggestion TableView with these values
