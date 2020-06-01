@@ -16,8 +16,6 @@ extension ErrorMessage {
 		switch self {
 			case .propertyToFilter:
 				return "Missing: Property to filter"
-			default:
-			break
 		}
 	}
 }
