@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+/// Custom Protocol
 public protocol TextFieldHelperProtocol {
 	associatedtype Model
 	typealias ItemHandler = (_ filtered: [Model]) -> Void

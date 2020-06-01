@@ -27,6 +27,8 @@ class ViewController: UIViewController {
 		searchTextField.singleItemHandler = { value in
 			print(value)
 		}
+
+		searchTextField.minCharactersNumberToStartFiltering = 3
 		
 		self.view.addSubview(searchTextField)
     }

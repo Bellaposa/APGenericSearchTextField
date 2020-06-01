@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+/// Filter Operator
 public enum FilterOperator {
 	case equal
 	case contains

@@ -12,17 +12,25 @@ private enum Direction {
 	case up
 }
 
+/// Generic Search Text Field
 public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
-	
+
+	/// datasource
 	fileprivate var datasource: TableViewDataSource<Model>?
+	/// identifier
 	fileprivate let identifier: String = "APGenericSearchTextFieldCell"
+	/// tableView
 	fileprivate var tableView: UITableView?
+	/// shadow View
 	fileprivate var shadowView: UIView?
+	/// result list header
 	fileprivate var resultsListHeader: UIView?
+	/// direction to .down
 	fileprivate var direction: Direction = .down
+	/// keyboard frame
 	fileprivate var keyboardFrame: CGRect?
 
-
+	/// Value for table view customisation
 	open var tableXOffset: CGFloat = 0.0
 	open var tableYOffset: CGFloat = 0.0
 	open var tableCornerRadius: CGFloat = 2.0
@@ -30,18 +38,22 @@ public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 	open var keyboardIsShowing = false
 	open var maxResultsListHeight = 0
 	open var minCharactersNumberToStartFiltering: Int = 0
+
+	/// Operator used for filter property
 	open var filterOperator: FilterOperator?
-
+	/// Property to filter
 	open var propertyToFilter: KeyPath<Model, String>?
-
+	/// Callback for selection
 	open var itemSelectionHandler: ItemHandler?
 	open var stoppedTypingHandler: StoppedTypingHandler?
 	open var singleItemHandler: SingleItemHandler?
 
+	/// Deinit
 	deinit {
 		NotificationCenter.default.removeObserver(self)
 	}
 
+	/// Init
 	public init(model: [Model], cellConfigurator: @escaping (CellConfigurator))  {
 		self.datasource = TableViewDataSource(models: model, reuseIdentifier: identifier, cellConfigurator: cellConfigurator)
 		super.init(frame: CGRect(x: 150,
@@ -50,34 +62,36 @@ public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 								 height: 20)) // dummy size
 		self.buildSearchTableView()
 	}
-
+	/// Required init
 	public required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
-
+	/// Layout subviews
 	override open func layoutSubviews() {
 		super.layoutSubviews()
 		buildSearchTableView()
 	}
-
+	/// willMove
 	override open func willMove(toSuperview newSuperview: UIView?) {
 		super.willMove(toSuperview: newSuperview)
-
+		/// adding textField delegates
 		self.addTarget(self, action: #selector(GenericSearchTextField.textFieldDidChange), for: .editingChanged)
 		self.addTarget(self, action: #selector(GenericSearchTextField.textFieldDidBeginEditing), for: .editingDidBegin)
 		self.addTarget(self, action: #selector(GenericSearchTextField.textFieldDidEndEditing), for: .editingDidEnd)
 		self.addTarget(self, action: #selector(GenericSearchTextField.textFieldDidEndEditingOnExit), for: .editingDidEndOnExit)
 
+		/// Notification for keyboard
 		NotificationCenter.default.addObserver(self, selector: #selector(GenericSearchTextField.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(GenericSearchTextField.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(GenericSearchTextField.keyboardDidChangeFrame(_:)), name: UIResponder.keyboardDidChangeFrameNotification, object: nil)
 
 	}
 
+	/// Did Change
 	@objc func textFieldDidChange() {
 
 		buildSearchTableView()
-
+		/// Check if properties are not null
 		guard let property = propertyToFilter else {
 			fatalError(ErrorMessage.missingPropertyToFilter.description)
 		}
@@ -86,35 +100,38 @@ public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 			fatalError(ErrorMessage.missingFilterOperator.description)
 		}
 
+		guard text!.count >= minCharactersNumberToStartFiltering else {
+			return
+		}
+		/// create predicate - search - and then reload
 		let predicate = filter(property, value: text!)
 		datasource?.search(query: predicate)
 		tableView?.reloadData()
 	}
-
+	/// Did Begin Editing
 	@objc func textFieldDidBeginEditing() {
 		clearResults()
 	}
-
+	/// Did End Editing
 	@objc func textFieldDidEndEditing() {
 		clearResults()
 		tableView?.reloadData()
 	}
-
+	/// Did End Editing on Exit
 	@objc func textFieldDidEndEditingOnExit() {
 		if let itemHandler = itemSelectionHandler {
 			itemHandler(datasource?.searchResults ?? [])
 		}
 	}
-
+	/// Keyboard Will Show Notification
 	@objc func keyboardWillShow(_ notification: Notification) {
 		if !keyboardIsShowing && isEditing {
 			keyboardIsShowing = true
 			keyboardFrame = ((notification as NSNotification).userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-//			interactedWith = true
-			prepareDrawTableResult()
+			drawTableResult()
 		}
 	}
-
+	/// Keyboard Will Hide Notification
 	@objc func keyboardWillHide(_ notification: Notification) {
 		if keyboardIsShowing {
 			keyboardIsShowing = false
@@ -122,16 +139,18 @@ public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 			redrawSearchTableView()
 		}
 	}
-
+	/// Keyboard Did Change Frame
 	@objc func keyboardDidChangeFrame(_ notification: Notification) {
 		DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
 			self?.keyboardFrame = ((notification as NSNotification).userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-			self?.prepareDrawTableResult()
+			self?.drawTableResult()
 		}
 	}
+	/// TableView DidSelect Row At IndexPath
 	public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		if let singleItem = singleItemHandler, let item = datasource?.getModelAt(indexPath) {
 			singleItem(item)
+			clearResults()
 		}
 	}
 }
@@ -182,7 +201,7 @@ extension GenericSearchTextField {
 					tableHeight = min(tableHeight, CGFloat(maxResultsListHeight))
 				}
 
-				// Set a bottom margin of 10p
+				/// Set a bottom margin
 				if tableHeight < tableView.contentSize.height {
 					tableHeight -= tableBottomMargin
 				}
@@ -225,7 +244,11 @@ extension GenericSearchTextField {
 
 		}
 	}
-
+	///
+	/// - Parameters:
+	///   - property: KeyPath Value
+	///   - value: value you want to search
+	/// - Returns: NSPredicate
 	fileprivate func filter(_ property: KeyPath<Model, String>, value: String) -> NSPredicate {
 		switch filterOperator {
 			case .some(.contains):
@@ -243,7 +266,7 @@ extension GenericSearchTextField {
 
 
 	/// Draw table result
-	fileprivate func prepareDrawTableResult() {
+	fileprivate func drawTableResult() {
 		guard let frame = self.superview?.convert(self.frame, to: UIApplication.shared.keyWindow) else { return }
 		if let keyboardFrame = keyboardFrame {
 			var newFrame = frame

@@ -6,14 +6,18 @@
 //
 
 import UIKit
-
+/// TableView DataSource
 class TableViewDataSource<Model>: NSObject, UITableViewDataSource {
-
+	/// Model
 	private var models: [Model] = []
+	/// Search Results
 	private(set) open var searchResults: [Model] = []
+	/// TableView identifier
 	private let reuseIdentifier: String
+	/// Cell Configurator
 	private let cellConfigurator: CellConfigurator
 
+	/// Init
 	init(models: [Model],
 		 reuseIdentifier: String,
 		 cellConfigurator: @escaping CellConfigurator) {
@@ -22,7 +26,7 @@ class TableViewDataSource<Model>: NSObject, UITableViewDataSource {
 		self.cellConfigurator = cellConfigurator
 	}
 	
-	
+	/// Table View Methods
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return searchResults.count
 	}
@@ -39,12 +43,18 @@ class TableViewDataSource<Model>: NSObject, UITableViewDataSource {
 
 	}
 }
-
+// MARK : - TableViewDataSource
 extension TableViewDataSource {
+
+	/// Returns the Model at indexPath
+	/// - Parameter indexPath: indexPath
+	/// - Returns: Model at indexPath
 	func getModelAt(_ indexPath: IndexPath) -> Model {
 		return searchResults[indexPath.item]
 	}
-	
+
+	/// Filters model by NSPredicate
+	/// - Parameter query: predicate to use
 	func search(query: NSPredicate) {
 		searchResults = models.filter(operation: query) ?? []
 		print(searchResults)

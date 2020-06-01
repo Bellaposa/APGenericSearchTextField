@@ -6,7 +6,7 @@
 //
 
 import Foundation
-// MARK: -
+// MARK: - Array Extension
 extension Array {
 	/// filter(operation: NSPredicate)
 	/// - Parameter operation: NSPredicate
