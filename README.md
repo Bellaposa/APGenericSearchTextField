@@ -18,7 +18,7 @@ For instance:
 
 The syntax can be very concise, it supports type inference and property chaining.
 
-##Purpose
+## Purpose
 Long time ago, I had the necessity to create a SearchTextField, and I thought it would be nice to apply this concept to it.  
 
 ### Under The Hood
