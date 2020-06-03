@@ -10,12 +10,12 @@ import UIKit
 class TableViewDataSource<Model>: NSObject, UITableViewDataSource {
 	/// Model
 	private var models: [Model] = []
-	/// Search Results
-	private(set) open var searchResults: [Model] = []
 	/// TableView identifier
 	private let reuseIdentifier: String
 	/// Cell Configurator
 	private let cellConfigurator: CellConfigurator
+	/// Search Results
+	open var searchResults: [Model] = []
 
 	/// Init
 	init(models: [Model],

@@ -10,6 +10,7 @@ import Foundation
 enum ErrorMessage {
 	case missingPropertyToFilter
 	case missingFilterOperator
+	case missingCellConfigurator
 }
 
 extension ErrorMessage {
@@ -19,6 +20,8 @@ extension ErrorMessage {
 				return "Missing: Property to filter"
 			case .missingFilterOperator:
 				return "Missing: Filter operator"
+			case .missingCellConfigurator:
+				return "Missing: Cell Configurator"
 		}
 	}
 }

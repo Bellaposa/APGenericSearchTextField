@@ -13,7 +13,7 @@ private enum Direction {
 }
 
 /// Generic Search Text Field
-public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
+open class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 
 	/// datasource
 	fileprivate var datasource: TableViewDataSource<Model>?
@@ -47,6 +47,16 @@ public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 	open var itemSelectionHandler: ItemHandler?
 	open var stoppedTypingHandler: StoppedTypingHandler?
 	open var singleItemHandler: SingleItemHandler?
+	open var cellConfigurator: CellConfigurator?
+
+	open var model: [Model] = [] {
+		didSet {
+			guard cellConfigurator != nil else {
+				fatalError(ErrorMessage.missingCellConfigurator.description)
+			}
+			self.datasource = TableViewDataSource(models: model, reuseIdentifier: identifier, cellConfigurator: cellConfigurator!)
+		}
+	}
 
 	/// Deinit
 	deinit {
@@ -56,12 +66,14 @@ public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 	/// Init
 	public init(model: [Model], frame: CGRect, cellConfigurator: @escaping (CellConfigurator)) {
 		self.datasource = TableViewDataSource(models: model, reuseIdentifier: identifier, cellConfigurator: cellConfigurator)
+		self.model = model
+		self.cellConfigurator = cellConfigurator
 		super.init(frame: frame)
 		self.buildSearchTableView()
 	}
 	/// Required init
 	public required init?(coder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
+		super.init(coder: coder)
 	}
 	/// Layout subviews
 	override open func layoutSubviews() {
@@ -87,6 +99,10 @@ public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 	/// Did Change
 	@objc func textFieldDidChange() {
 
+		if text?.isEmpty == true {
+			clearResults()
+		}
+
 		buildSearchTableView()
 		/// Check if properties are not null
 		guard let property = propertyToFilter else {
@@ -103,6 +119,11 @@ public class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 		/// create predicate - search - and then reload
 		let predicate = filter(property, value: text!)
 		datasource?.search(query: predicate)
+		guard let count = datasource?.searchResults.count, count > 0 else {
+			clearResults()
+			return
+		}
+
 		tableView?.reloadData()
 	}
 	/// Did Begin Editing
@@ -258,6 +279,8 @@ extension GenericSearchTextField {
 
 	/// Clear all results
 	fileprivate func clearResults() {
+		datasource?.searchResults.removeAll()
+		tableView?.reloadData()
 		tableView?.removeFromSuperview()
 	}
 
