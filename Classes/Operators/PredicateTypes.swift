@@ -17,7 +17,7 @@ extension Comparison {
 	convenience init<Element>(_ keyPath: KeyPath<Root, Element>, _ comparisonPredicate: NSComparisonPredicate.Operator, _ value: Any?) {
 		let leftExpression = \Root.self == keyPath ? NSExpression.expressionForEvaluatedObject() : NSExpression(forKeyPath: keyPath)
 		let rightExpression = NSExpression(forConstantValue: value)
-		
-		self.init(leftExpression: leftExpression, rightExpression: rightExpression, modifier: .direct, type: comparisonPredicate)
+
+		self.init(leftExpression: leftExpression, rightExpression: rightExpression, modifier: .direct, type: comparisonPredicate, options: .caseInsensitive)
 	}
 }
