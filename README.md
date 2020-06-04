@@ -94,7 +94,7 @@ singleItemHandler = { [weak self] value in
 ```
 
 ### Storyboard
-Storyboards have a problem with having a generic class. The thing is that Interface Builder communicates to the ViewController through the `Objective-C` runtime. Because of this, InterfaceBuilder is limited to the features that Objective-C provides. In this case, generics are not supported. By the way there is a workaround to use generic class with storyboard.  
+Storyboards have a problem with having a generic class. The thing is that Interface Builder communicates to the ViewController through the `Objective-C` runtime. Because of this, `InterfaceBuilder` is limited to the features that ``Objective-C` provides. In this case, generics are not supported. By the way there is a workaround to use generic class with storyboard.  
 
 You need to:  
 
