@@ -57,7 +57,7 @@ extension TableViewDataSource {
 	/// - Parameter query: predicate to use
 	func search(query: NSPredicate) {
 		searchResults = models.filter(operation: query) ?? []
-		Console.debug(searchResults.description)
+		print(searchResults.description)
 	}
 }
 

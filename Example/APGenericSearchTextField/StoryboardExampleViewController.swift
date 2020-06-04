@@ -33,8 +33,7 @@ class StoryboardExampleViewController: UIViewController {
 		searchTextField.placeholder = "Type Here"
 		searchTextField.filterOperator = .contains
 		searchTextField.propertyToFilter = \.name
-		searchTextField.cellConfigurator = {
-			(person, cell) in
+		searchTextField.cellConfigurator = { [weak self] (person, cell) in
 			cell.textLabel?.text = person.name
 		}
 		searchTextField.model = persons
