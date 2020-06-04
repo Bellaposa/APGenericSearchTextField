@@ -14,7 +14,7 @@ class ProgramaticallyExampleViewController: UIViewController {
 	var persons = Person.generateRandomPerson()
 
 	override func viewDidLoad() {
-        super.viewDidLoad()
+		super.viewDidLoad()
 		let frame = CGRect(x: 150, y: 150, width: 200, height: 20)
 		let searchTextField = GenericSearchTextField(model: persons, frame: frame) { (person, cell) in
 			cell.textLabel?.text = person.name
@@ -30,14 +30,14 @@ class ProgramaticallyExampleViewController: UIViewController {
 		}
 
 		searchTextField.minCharactersNumberToStartFiltering = 3
-
+		
 		self.view.addSubview(searchTextField)
-    }
+	}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
 
 }
 
