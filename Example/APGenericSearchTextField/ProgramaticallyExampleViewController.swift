@@ -9,7 +9,7 @@
 import UIKit
 import APGenericSearchTextField
 
-class ViewController: UIViewController {
+class ProgramaticallyExampleViewController: UIViewController {
 
 	var persons = Person.generateRandomPerson()
 
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 		}
 
 		searchTextField.minCharactersNumberToStartFiltering = 3
-		
+
 		self.view.addSubview(searchTextField)
     }
 
