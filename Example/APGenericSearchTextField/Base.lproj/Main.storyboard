@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uqj-ha-rIF">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Programatically Example View Controller-->
+        <!--Programmatically Example View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ProgramaticallyExampleViewController" customModule="APGenericSearchTextField_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ProgrammaticallyExampleViewController" customModule="APGenericSearchTextField_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -24,6 +24,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="116"/>
+        </scene>
+        <!--Storyboard Example View Controller-->
+        <scene sceneID="F05-IZ-VT5">
+            <objects>
+                <viewController id="uqj-ha-rIF" customClass="StoryboardExampleViewController" customModule="APGenericSearchTextField_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OJ6-ND-7aB"/>
+                        <viewControllerLayoutGuide type="bottom" id="av9-6V-wMG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l7O-wD-YZu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uQT-ki-n8B" customClass="SearchTextField" customModule="APGenericSearchTextField_Example" customModuleProvider="target">
+                                <rect key="frame" x="116" y="106" width="143" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="uQT-ki-n8B" secondAttribute="trailing" constant="100" id="5ol-hG-x1Q"/>
+                            <constraint firstItem="uQT-ki-n8B" firstAttribute="leading" secondItem="l7O-wD-YZu" secondAttribute="leadingMargin" constant="100" id="jTS-aJ-aeK"/>
+                            <constraint firstItem="uQT-ki-n8B" firstAttribute="top" secondItem="OJ6-ND-7aB" secondAttribute="bottom" constant="106" id="rR2-SX-JyL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="uQT-ki-n8B" id="Ttu-0v-ZOc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14K-xk-A1A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="116"/>
         </scene>
     </scenes>
 </document>

@@ -9,7 +9,7 @@
 import UIKit
 import APGenericSearchTextField
 
-class ProgramaticallyExampleViewController: UIViewController {
+class ProgrammaticallyExampleViewController: UIViewController {
 
 	var persons = Person.generateRandomPerson()
 
