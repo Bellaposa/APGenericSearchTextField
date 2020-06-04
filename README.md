@@ -57,7 +57,7 @@ At the moment only two operators are supported
 2. Equal
 
 ### Property To Filter
-Using keyPath you can choose what field of object you want to compare
+Using keyPath you can choose what field you want to compare.
 
 For istance: `\.name` if you want to filter your array objects by name 
 
