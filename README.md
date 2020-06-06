@@ -102,8 +102,8 @@ You need to:
 `i.e. class SearchTextField: GenericSearchTextField<Person>{}`
 * Define Outlet 
 	- Defining an outlet of type `SearchTextField`, XCode will report an error. It's important to change type from `SearchTextField` to `UIView`
-	- After: `@IBOutlet weak var textField: SearchTextField!`
-	- Before: `@IBOutlet weak var textField: UIView!`	
+	- Before: `@IBOutlet weak var textField: SearchTextField!`
+	- After: `@IBOutlet weak var textField: UIView!`	
 
 * Define a computed property of type `GenericSearchTextField`
  	- Cast your variable to `GenericSearchTextField`
