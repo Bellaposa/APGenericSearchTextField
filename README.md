@@ -36,7 +36,7 @@ You have to follow few simple steps:
 1.  Define property by using @objc 
 1.  Select filterOperator 
 1.  Select propertyToFilter
-2. 	 Define your cellConfigurator
+2.  Define your cellConfigurator
 
 ### Model 
 ``` swift
@@ -94,7 +94,7 @@ singleItemHandler = { [weak self] value in
 ```
 
 ### Storyboard
-Storyboards have a problem with having a generic class. The thing is that Interface Builder communicates to the ViewController through the `Objective-C` runtime. Because of this, `InterfaceBuilder` is limited to the features that ``Objective-C` provides. In this case, generics are not supported. By the way there is a workaround to use generic class with storyboard.  
+Storyboards have a problem with having a generic class. The thing is that Interface Builder communicates to the ViewController through the `Objective-C` runtime. Because of this, `InterfaceBuilder` is limited to the features that `Objective-C` provides. In this case, generics are not supported. By the way there is a workaround to use generic class with storyboard.  
 
 You need to:  
 
@@ -105,8 +105,8 @@ You need to:
 	- After: `@IBOutlet weak var textField: SearchTextField!`
 	- Before: `@IBOutlet weak var textField: UIView!`	
 
-* Define a variable of type `GenericSearchTextField`
- 	- Cast your variable with `GenericSearchTextField`
+* Define a computed property of type `GenericSearchTextField`
+ 	- Cast your variable to `GenericSearchTextField`
 	- Now your are able to use your variable
 
 ```swift 
