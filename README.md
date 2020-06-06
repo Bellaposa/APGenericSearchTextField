@@ -5,6 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/APGenericSearchTextField.svg?style=flat)](https://cocoapods.org/pods/APGenericSearchTextField)
 [![Platform](https://img.shields.io/cocoapods/p/APGenericSearchTextField.svg?style=flat)](https://cocoapods.org/pods/APGenericSearchTextField)
 
+![](example.gif)
+
+
 ### Context
 
 Swift 4 introduced a new type called KeyPath. It allows to access the properties of an object.  
