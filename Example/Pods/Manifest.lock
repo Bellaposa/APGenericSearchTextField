@@ -1,5 +1,5 @@
 PODS:
-  - APGenericSearchTextField (0.1.0)
+  - APGenericSearchTextField (0.1.8)
 
 DEPENDENCIES:
   - APGenericSearchTextField (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  APGenericSearchTextField: b40d28411ada0ab66d85abceb73c0de71cadfc83
+  APGenericSearchTextField: 8fcf30d6ca88efa6c9b93973f7d91004588bd8f0
 
 PODFILE CHECKSUM: 1ac0be5ef60c89841d4ab462bb4aaa2aca328d34
 
