@@ -129,6 +129,7 @@ Found a bug? Simple Pull Request
 * Better Filter management
 * Custom cell support
 * <s>Storyboard Support</s>
+* <s>Swift Package Manager</s>
 
 
 ### Demo
