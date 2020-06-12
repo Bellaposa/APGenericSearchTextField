@@ -1,6 +1,6 @@
 {
   "name": "APGenericSearchTextField",
-  "version": "0.1.8",
+  "version": "0.2.1",
   "summary": "A generic search UITextField with suggestions list",
   "description": "\"A generic search UITextField with suggestions list with the power of KeyPath and NSPredicate\"",
   "homepage": "https://github.com/Bellaposa/APGenericSearchTextField",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Bellaposa/APGenericSearchTextField.git",
-    "tag": "0.1.8"
+    "tag": "0.2.1"
   },
   "social_media_url": "https://twitter.com/nice_pose",
   "platforms": {

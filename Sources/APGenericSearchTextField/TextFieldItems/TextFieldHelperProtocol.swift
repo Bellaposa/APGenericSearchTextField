@@ -5,7 +5,7 @@
 //  Created by Antonio Posabella on 01/06/2020.
 //
 
-import Foundation
+import UIKit
 /// Custom Protocol
 public protocol TextFieldHelperProtocol {
 	associatedtype Model
