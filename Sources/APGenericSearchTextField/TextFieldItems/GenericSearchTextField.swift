@@ -13,12 +13,10 @@ private enum Direction {
 }
 
 /// Generic Search Text Field
-open class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
+open class GenericSearchTextField<Model, Cell>: UITextField, UITableViewDelegate where Cell: BaseTableViewCell<Model> {
 
 	/// datasource
-	fileprivate var datasource: TableViewDataSource<Model>?
-	/// identifier
-	fileprivate let identifier: String = "APGenericSearchTextFieldCell"
+	fileprivate var datasource: GenericTableViewDataSource<Model, Cell>?
 	/// tableView
 	fileprivate var tableView: UITableView?
 	/// shadow View
@@ -54,18 +52,18 @@ open class GenericSearchTextField<Model>: UITextField, UITableViewDelegate {
 			guard cellConfigurator != nil else {
 				fatalError(ErrorMessage.missingCellConfigurator.description)
 			}
-			self.datasource = TableViewDataSource(models: model, reuseIdentifier: identifier, cellConfigurator: cellConfigurator!)
+			self.datasource = GenericTableViewDataSource(models: model, cellConfigurator: cellConfigurator!)
 		}
 	}
 
-	/// Deinit
+	/// De-Init
 	deinit {
 		NotificationCenter.default.removeObserver(self)
 	}
 
 	/// Init
 	public init(model: [Model], frame: CGRect, cellConfigurator: @escaping (CellConfigurator)) {
-		self.datasource = TableViewDataSource(models: model, reuseIdentifier: identifier, cellConfigurator: cellConfigurator)
+		self.datasource = GenericTableViewDataSource(models: model, cellConfigurator: cellConfigurator)
 		self.model = model
 		self.cellConfigurator = cellConfigurator
 		super.init(frame: frame)

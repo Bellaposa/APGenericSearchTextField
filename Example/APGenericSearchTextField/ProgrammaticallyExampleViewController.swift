@@ -16,8 +16,10 @@ class ProgrammaticallyExampleViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		let frame = CGRect(x: 150, y: 150, width: 200, height: 20)
-		let searchTextField = GenericSearchTextField(model: persons, frame: frame) { (person, cell) in
-			cell.textLabel?.text = person.name
+
+		let searchTextField = GenericSearchTextField(model: persons, frame: frame) { [weak self] (person, cell) -> PersonTableViewCell in
+			cell.nameLabel?.text = person.name
+			return cell
 		}
 
 		searchTextField.placeholder = "Type Here"
@@ -25,12 +27,11 @@ class ProgrammaticallyExampleViewController: UIViewController {
 		searchTextField.propertyToFilter = \.name
 
 		searchTextField.singleItemHandler = { [weak self] value in
-			print(value)
 			searchTextField.text = value.name
 		}
 
 		searchTextField.minCharactersNumberToStartFiltering = 3
-		
+
 		self.view.addSubview(searchTextField)
 	}
 
@@ -40,4 +41,3 @@ class ProgrammaticallyExampleViewController: UIViewController {
 	}
 
 }
-

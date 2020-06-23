@@ -7,11 +7,9 @@
 
 import UIKit
 /// TableView DataSource
-class GenericTableViewDataSource<Model, Cell>: NSObject, UITableViewDataSource {
+class GenericTableViewDataSource<Model, Cell>: NSObject, UITableViewDataSource where Cell: BaseTableViewCell<Model> {
 	/// Model
 	private var models: [Model] = []
-	/// TableView identifier
-	private let reuseIdentifier: String
 	/// Cell Configurator
 	private let cellConfigurator: CellConfigurator
 	/// Search Results
@@ -19,10 +17,8 @@ class GenericTableViewDataSource<Model, Cell>: NSObject, UITableViewDataSource {
 
 	/// Init
 	init(models: [Model],
-		 reuseIdentifier: String,
 		 cellConfigurator: @escaping CellConfigurator) {
 		self.models = models
-		self.reuseIdentifier = reuseIdentifier
 		self.cellConfigurator = cellConfigurator
 	}
 	
@@ -32,15 +28,9 @@ class GenericTableViewDataSource<Model, Cell>: NSObject, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let model = getModelAt(indexPath)
-		
-		var cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)
-		cell = cell == nil ? UITableViewCell(style: .default, reuseIdentifier: reuseIdentifier) : UITableViewCell()
-		
-		cellConfigurator(model, cell!)
-		
-		return cell!
-
+		tableView.register(Cell.self)
+		let cell: Cell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+		return cellConfigurator(getModelAt(indexPath), cell)
 	}
 }
 // MARK : - TableViewDataSource

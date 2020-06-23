@@ -11,6 +11,7 @@ enum ErrorMessage {
 	case missingPropertyToFilter
 	case missingFilterOperator
 	case missingCellConfigurator
+	case cellIdentifierError
 }
 
 extension ErrorMessage {
@@ -22,6 +23,8 @@ extension ErrorMessage {
 				return "Missing: Filter operator"
 			case .missingCellConfigurator:
 				return "Missing: Cell Configurator"
+			case .cellIdentifierError:
+				return "Error: Could not dequeue cell with identifier"
 		}
 	}
 }

@@ -9,8 +9,9 @@ import UIKit
 /// Custom Protocol
 public protocol TextFieldHelperProtocol {
 	associatedtype Model
+	associatedtype Cell
 	typealias ItemHandler = (_ filtered: [Model]) -> Void
 	typealias SingleItemHandler = (_ filtered: Model) -> Void
-	typealias CellConfigurator = (Model, UITableViewCell) -> Void
+	typealias CellConfigurator = (Model, Cell) -> Cell
 	typealias StoppedTypingHandler = (() -> Void)?
 }
