@@ -18,6 +18,7 @@ class ProgrammaticallyExampleViewController: UIViewController {
 		let frame = CGRect(x: 150, y: 150, width: 200, height: 20)
 
 		let searchTextField = GenericSearchTextField(model: persons, frame: frame) { [weak self] (person, cell) -> PersonTableViewCell in
+			guard let _ = self else { return cell }
 			cell.nameLabel?.text = person.name
 			return cell
 		}
@@ -27,9 +28,11 @@ class ProgrammaticallyExampleViewController: UIViewController {
 		searchTextField.propertyToFilter = \.name
 
 		searchTextField.singleItemHandler = { [weak self] value in
+			guard let _ = self else { return }
 			searchTextField.text = value.name
 		}
-
+		
+		searchTextField.isNibCell = true
 		searchTextField.minCharactersNumberToStartFiltering = 3
 
 		self.view.addSubview(searchTextField)

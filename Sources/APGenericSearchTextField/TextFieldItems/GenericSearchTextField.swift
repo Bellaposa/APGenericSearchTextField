@@ -46,6 +46,12 @@ open class GenericSearchTextField<Model, Cell>: UITextField, UITableViewDelegate
 	open var stoppedTypingHandler: StoppedTypingHandler?
 	open var singleItemHandler: SingleItemHandler?
 	open var cellConfigurator: CellConfigurator?
+	/// Variable for NIB registration
+	open var isNibCell: Bool? {
+		didSet {
+			self.datasource?.isNibCell = isNibCell
+		}
+	}
 
 	open var model: [Model] = [] {
 		didSet {

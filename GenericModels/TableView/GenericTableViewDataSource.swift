@@ -14,6 +14,8 @@ class GenericTableViewDataSource<Model, Cell>: NSObject, UITableViewDataSource w
 	private let cellConfigurator: CellConfigurator
 	/// Search Results
 	open var searchResults: [Model] = []
+	/// NIB Cell
+	open var isNibCell: Bool?
 
 	/// Init
 	init(models: [Model],
@@ -28,7 +30,7 @@ class GenericTableViewDataSource<Model, Cell>: NSObject, UITableViewDataSource w
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		tableView.register(Cell.self)
+		isNibCell == true ? tableView.register(Cell.nib, forCellReuseIdentifier: Cell.reuseIdentifier) : tableView.register(Cell.self)
 		let cell: Cell = tableView.dequeueReusableCell(forIndexPath: indexPath)
 		return cellConfigurator(getModelAt(indexPath), cell)
 	}
