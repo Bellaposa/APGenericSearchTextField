@@ -10,7 +10,7 @@ import UIKit
 import APGenericSearchTextField
 
 /// 1 - Declare your custom "UITextField" that extends GenericSearchTextField and add it to storyboard
-class SearchTextField: GenericSearchTextField<Person>{}
+class SearchTextField: GenericSearchTextField<Person, PersonTableViewCell>{}
 
 class StoryboardExampleViewController: UIViewController {
 
@@ -22,7 +22,7 @@ class StoryboardExampleViewController: UIViewController {
 	/// 3: - DEFINE A VARIABLE of type `GenericSearchTextField`
 	/// cast your variable with `GenericSearchTextField`
 	/// Now your are able to use your variable
-	var searchTextField: GenericSearchTextField<Person> {
+	var searchTextField: GenericSearchTextField<Person, PersonTableViewCell> {
 		return textField as! GenericSearchTextField
 	}
 
@@ -34,7 +34,8 @@ class StoryboardExampleViewController: UIViewController {
 		searchTextField.filterOperator = .contains
 		searchTextField.propertyToFilter = \.name
 		searchTextField.cellConfigurator = { [weak self] (person, cell) in
-			cell.textLabel?.text = person.name
+			cell.nameLabel.text = person.name
+			return cell
 		}
 		searchTextField.model = persons
 
